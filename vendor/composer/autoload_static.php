@@ -17,7 +17,6 @@ class ComposerStaticInit3b861742b0e70031ce49e88da5555053
             'Zend\\Validator\\' => 15,
             'Zend\\Uri\\' => 9,
             'Zend\\Stdlib\\' => 12,
-            'Zend\\SkeletonInstaller\\' => 23,
             'Zend\\ServiceManager\\' => 20,
             'Zend\\Router\\' => 12,
             'Zend\\Mvc\\' => 9,
@@ -49,7 +48,7 @@ class ComposerStaticInit3b861742b0e70031ce49e88da5555053
         'A' => 
         array (
             'Application\\' => 12,
-            'ApplicationTest\\' => 16,
+            'Album\\' => 6,
         ),
     );
 
@@ -69,10 +68,6 @@ class ComposerStaticInit3b861742b0e70031ce49e88da5555053
         'Zend\\Stdlib\\' => 
         array (
             0 => __DIR__ . '/..' . '/zendframework/zend-stdlib/src',
-        ),
-        'Zend\\SkeletonInstaller\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/zendframework/zend-skeleton-installer/src',
         ),
         'Zend\\ServiceManager\\' => 
         array (
@@ -162,10 +157,14 @@ class ComposerStaticInit3b861742b0e70031ce49e88da5555053
         array (
             0 => __DIR__ . '/../..' . '/module/Application/src',
         ),
-        'ApplicationTest\\' => 
+        'Album\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/module/Application/test',
+            0 => __DIR__ . '/../..' . '/module/Album/src',
         ),
+    );
+
+    public static $classMap = array (
+        'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
@@ -173,6 +172,7 @@ class ComposerStaticInit3b861742b0e70031ce49e88da5555053
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInit3b861742b0e70031ce49e88da5555053::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit3b861742b0e70031ce49e88da5555053::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit3b861742b0e70031ce49e88da5555053::$classMap;
 
         }, null, ClassLoader::class);
     }

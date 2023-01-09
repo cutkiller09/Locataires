@@ -1,9 +1,10 @@
-FROM php:7.2-apache
+FROM php:7.4-apache
 
 WORKDIR /var/www
 
 RUN apt-get update \
  && apt install -y libicu-dev \
+    libzip-dev \ 
  && apt-get install -y git zlib1g-dev \
  && docker-php-ext-install zip \
  && docker-php-ext-install intl \
