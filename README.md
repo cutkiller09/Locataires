@@ -51,6 +51,6 @@ And then you can access all outgoing emails at
 
 http://localhost:8025
 
-#Zend framework tutorials
+# Zend framework tutorials
 
 https://docs.zendframework.com/tutorials/getting-started/skeleton-application/ 
